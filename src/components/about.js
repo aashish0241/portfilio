@@ -6,7 +6,7 @@ import Back from "../assets/back.jpg"
 const About1 = () => {
   return (
     <>
-      <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px]  bg-[#453952] lg:pb-[90px] dark:bg-dark">
+      <section className="overflow-hidden pt-20 pb-12 pl-3 lg:pt-[120px]  bg-[#453952] lg:pb-[90px] dark:bg-dark">
         <h1 className="flex justify-center items-center m-1 text-6xl font-bold">About   <span className="text-yellow-800 p-2">Me</span></h1>
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
