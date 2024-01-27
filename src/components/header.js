@@ -1,24 +1,23 @@
 
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import { Disclosure, } from '@headlessui/react';
-import { Bars3Icon,  XMarkIcon } from '@heroicons/react/24/outline';
+import { Disclosure} from '@headlessui/react'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom';
 import logo from "../assets/headerlogo.png";
 
 const navigation = [
-  { name: 'Home', to: '/', current: true },
-  { name: 'About Me', to: '/about', current: false },
-  { name: 'My Skills', to: '/skills', current: false },
-  { name: 'My Service', to: '/service', current: false },
-  { name: 'My Portfolio', to: '/portfolio', current: false },
-  { name: 'Pricing', to: '/pricing', current: false },
-  { name: 'Contact Us', to: '/contact', current: false },
+  { name: 'Home', route: '/', current: true },
+  { name: 'About Me', route: '/about', current: false },
+  { name: 'My Skills', route: '/skills', current: false },
+  { name: 'My Service', route: '/service', current: false },
+  { name: 'My Portfolio', route: '/portfolio', current: false },
+  { name: 'Pricing', route: '/pricing', current: false },
+  { name: 'Contact Us', route: '/contact', current: false },
 ];
-
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(' ')
 }
 
-export default function Header() {
+export default function Example() {
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -39,7 +38,7 @@ export default function Header() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                <img
                     className="h-8 w-auto"
                     src={logo}
                     alt="Your Company"
@@ -49,45 +48,59 @@ export default function Header() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <Link
-                        key={item.name}
-                        to={item.to}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </Link>
+                      key={item.name}
+                      to={item.route}
+                      className={classNames(
+                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        'rounded-md px-3 py-2 text-sm font-medium'
+                      )}
+                    >
+                      {item.name}
+                    </Link>
                     ))}
                   </div>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <button
+                  type="button"
+                  className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                >
+                  <span className="absolute -inset-1.5" />
+                  <span className="sr-only">View notifications</span>
+                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
+
                 {/* Profile dropdown */}
+               
               </div>
             </div>
           </div>
-
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
-                <Link
+                <Disclosure.Button
                   key={item.name}
-                  to={item.to}
+                  as="a"
+                  href={item.route}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  activeClassName="bg-gray-900 text-white"
                 >
                   {item.name}
-                </Link>
+                </Disclosure.Button>
               ))}
             </div>
           </Disclosure.Panel>
+
+          
+
         </>
       )}
     </Disclosure>
-  );
+  )
 }

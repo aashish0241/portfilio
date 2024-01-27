@@ -8,6 +8,7 @@ import Service from './components/service';
 import Pricing from './components/price';
 import Portfilio from './components/portfilio';
 import Contact from './components/contact';
+import Footer from './components/footer';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/portfolio" element={<Portfilio/>} />
         <Route path="/skills" element={<SkillsCollection/>} />
       </Routes>
+      <Footer/>
     </Router>
   );
 };

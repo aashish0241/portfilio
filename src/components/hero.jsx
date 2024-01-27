@@ -24,7 +24,7 @@ const Hero = () => {
           </button>
         </div>
 
-        <div className='flex gap-2 ml-4 sm:mt-8 lg:mt-12 sm:ml-10 text-4xl sm:text-5xl lg:text-6xl'>
+        <div className='flex gap-2 ml-4 sm:mt-8 lg:mt-12 pb-8 sm:ml-10 text-4xl sm:text-5xl lg:text-6xl'>
   <a href="https://www.facebook.com/profile.php?id=100053096056726">
     <FaFacebook className='bg-blue- text-white rounded-[50%]' />
   </a>
