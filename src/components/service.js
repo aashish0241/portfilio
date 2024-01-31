@@ -41,7 +41,7 @@ const cards = [
   },
 ];
 
-const CardCollection = () => {
+const Service = () => {
   return (
     <section className="overflow-hidden pt-1 pb-12 lg:pt-[10px]  bg-[#453952] lg:pb-[90px] dark:bg-dark">
     <div className='overflow-hidden pt-2 pb-12 lg:pt-[12px]  bg-[#453952] lg:pb-[90px] dark:bg-dark'>
@@ -70,4 +70,4 @@ const CardCollection = () => {
   );
 };
 
-export default CardCollection;
+export default Service;

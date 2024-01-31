@@ -1,6 +1,6 @@
 
 import { Disclosure} from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon,  XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom';
 import logo from "../assets/headerlogo.png";
 
@@ -68,7 +68,7 @@ export default function Example() {
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  
                 </button>
 
                 {/* Profile dropdown */}
