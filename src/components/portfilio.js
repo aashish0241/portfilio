@@ -20,7 +20,7 @@ const cards = [
     image: Findjob,
     title: 'Find job for worker',
     description: 'Creating fully customized web applications from scratch to meet your unique requirements.',
-    link: 'https://findjob.netlify.app',
+    link: 'https://jobfindernepal.netlify.app/find-jobs',
   },
   
   
