@@ -1,7 +1,7 @@
 import React from 'react';
 import Laptop from "../assets/laptop.jpg";
 import School from "../assets/school.png";
-import Findjob from "./assets/jobfind.png";
+import Findjob from "../assets/jobfind.png";
 
 const cards = [
   {
