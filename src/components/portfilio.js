@@ -1,6 +1,7 @@
 import React from 'react';
 import Laptop from "../assets/laptop.jpg";
 import School from "../assets/school.png";
+import Findjob from "./assets/findjob.PNG";
 
 const cards = [
   {
@@ -14,6 +15,12 @@ const cards = [
     title: 'School Student Note Website',
     description: 'Creating fully customized web applications from scratch to meet your unique requirements.',
     link: 'https://aashish4756.blogspot.com',
+  },
+  {
+    image: findjob,
+    title: 'Find job for worker',
+    description: 'Creating fully customized web applications from scratch to meet your unique requirements.',
+    link: 'https://findjob.netlify.app',
   },
   
   
