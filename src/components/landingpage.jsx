@@ -1,11 +1,11 @@
-import React from 'react';
-import Hero from './hero';
-import About1 from './about';
-import Skillscollection from './skills';
-import Service from './service';
-import Portfilio from "./portfilio"
-import Pricing from './price';
-import Contact from './contact';
+import React from "react";
+import Hero from "./hero";
+import About1 from "./about";
+import Skillscollection from "./skills";
+import Service from "./service";
+import Portfilio from "./portfilio";
+import Contact from "./contact";
+import Certificate from "./certificate";
 
 const LandingPage = () => {
   return (
@@ -13,11 +13,10 @@ const LandingPage = () => {
       <Hero />
       <About1 />
       <Skillscollection />
-      <Service/>
-      <Portfilio/>
-      <Pricing/>
-      <Contact/>
-    
+      <Certificate />
+      <Service />
+      <Portfilio />
+      <Contact />
     </div>
   );
 };

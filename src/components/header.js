@@ -1,20 +1,19 @@
-
-import { Disclosure} from '@headlessui/react'
-import { Bars3Icon,  XMarkIcon } from '@heroicons/react/24/outline'
-import { Link } from 'react-router-dom';
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 import logo from "../assets/headerlogo.png";
 
 const navigation = [
-  { name: 'Home', route: '/', current: true },
-  { name: 'About Me', route: '/about', current: false },
-  { name: 'My Skills', route: '/skills', current: false },
-  { name: 'My Service', route: '/service', current: false },
-  { name: 'My Portfolio', route: '/portfolio', current: false },
-  { name: 'Pricing', route: '/pricing', current: false },
-  { name: 'Contact Us', route: '/contact', current: false },
+  { name: "Home", route: "/", current: true },
+  { name: "About Me", route: "/about", current: false },
+  { name: "My Skills", route: "/skills", current: false },
+  { name: "My Service", route: "/service", current: false },
+  { name: "My Portfolio", route: "/portfolio", current: false },
+
+  { name: "Contact Us", route: "/contact", current: false },
 ];
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
@@ -38,25 +37,23 @@ export default function Example() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                <img
-                    className="h-8 w-auto"
-                    src={logo}
-                    alt="Your Company"
-                  />
+                  <img className="h-8 w-auto" src={logo} alt="Your Company" />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <Link
-                      key={item.name}
-                      to={item.route}
-                      className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                        'rounded-md px-3 py-2 text-sm font-medium'
-                      )}
-                    >
-                      {item.name}
-                    </Link>
+                        key={item.name}
+                        to={item.route}
+                        className={classNames(
+                          item.current
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          "rounded-md px-3 py-2 text-sm font-medium"
+                        )}
+                      >
+                        {item.name}
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -68,11 +65,9 @@ export default function Example() {
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
-                  
                 </button>
 
                 {/* Profile dropdown */}
-               
               </div>
             </div>
           </div>
@@ -96,11 +91,8 @@ export default function Example() {
               ))}
             </div>
           </Disclosure.Panel>
-
-          
-
         </>
       )}
     </Disclosure>
-  )
+  );
 }
