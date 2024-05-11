@@ -9,6 +9,8 @@ import Portfilio from "./components/portfilio";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Certificate from "./components/certificate";
+import Error10 from "./components/error";
+
 
 const App = () => {
   return (
@@ -18,6 +20,7 @@ const App = () => {
         {/* Specify the element or component for the root route */}
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<AboutDescribe />} />
+        <Route path="*" element={<Error10/>}/>
         <Route path="/contact" element={<Contact />} />
         <Route path="/service" element={<Service />} />
         <Route path="/portfolio" element={<Portfilio />} />

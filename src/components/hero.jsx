@@ -10,7 +10,6 @@ import { TbBrandUpwork } from "react-icons/tb";
 import aashishcv from "../assets/aashishcv.pdf";
 import { Link } from "react-router-dom";
 
-
 const Hero = () => {
   function openPDF() {
     // You can modify this URL to point to your PDF file
@@ -41,12 +40,10 @@ const Hero = () => {
           in the digital landscape.
         </p>
         <div className="mt-4 sm:mt-8">
-          <Link to="/contact"> 
-          <button
-            className="bg-dark dark:bg-dark-2 m-3 border-dark dark:border-dark-2 border rounded-full inline-flex items-center justify-center py-3 px-7 text-center text-base sm:text-lg lg:text-xl font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5"
-          >
-            Hire Me
-          </button>
+          <Link to="/contact">
+            <button className="bg-dark dark:bg-dark-2 m-3 border-dark dark:border-dark-2 border rounded-full inline-flex items-center justify-center py-3 px-7 text-center text-base sm:text-lg lg:text-xl font-medium text-white hover:bg-body-color hover:border-body-color disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5">
+              Hire Me
+            </button>
           </Link>
           <button
             onClick={() => {
