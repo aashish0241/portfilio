@@ -1,4 +1,6 @@
+// Importing necessary packages and icons
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -13,45 +15,51 @@ import {
   FaChrome,
 } from "react-icons/fa";
 
+// Skills data with colors
 const skills = [
-  { name: "HTML", icon: FaHtml5, color: "#eb4034" },
-  { name: "CSS", icon: FaCss3Alt, color: "#0000FF" },
-  { name: "JavaScript", icon: FaJs, color: "#FFFF00" },
-  { name: "Node.js", icon: FaNode, color: "#008000" },
-  { name: "React.js", icon: FaReact, color: "#ADD8E6" },
-  { name: "MongoDB", icon: FaDatabase, color: "#008000" },
-  { name: "Tailwind CSS", icon: FaCode, color: "#00FFFF" },
-  { name: "Redux.js", icon: FaCode, color: "#800080" },
-  { name: "Express", icon: FaCode, color: "#808080" },
-  { name: "TypeScript", icon: FaCode, color: "#0000FF" },
-  { name: "VS Code", icon: FaCode, color: "#0000FF" },
-  { name: "Git", icon: FaGit, color: "#FF0000" },
-  { name: "GitHub", icon: FaGithub, color: "#800080" },
-  { name: "Netlify", icon: FaCode, color: "#000000" },
-  { name: "Figma", icon: FaFigma, color: "#FFC0CB" },
-  { name: "Chrome", icon: FaChrome, color: "#FF0000" },
+  { name: "HTML", icon: FaHtml5, color: "text-red-500" },
+  { name: "CSS", icon: FaCss3Alt, color: "text-blue-500" },
+  { name: "JavaScript", icon: FaJs, color: "text-yellow-400" },
+  { name: "Node.js", icon: FaNode, color: "text-green-500" },
+  { name: "React.js", icon: FaReact, color: "text-blue-300" },
+  { name: "MongoDB", icon: FaDatabase, color: "text-green-600" },
+  { name: "Tailwind CSS", icon: FaCode, color: "text-teal-400" },
+  { name: "Redux.js", icon: FaCode, color: "text-purple-600" },
+  { name: "Express", icon: FaCode, color: "text-gray-500" },
+  { name: "TypeScript", icon: FaCode, color: "text-blue-700" },
+  { name: "VS Code", icon: FaCode, color: "text-blue-600" },
+  { name: "Git", icon: FaGit, color: "text-red-600" },
+  { name: "GitHub", icon: FaGithub, color: "text-purple-700" },
+  { name: "Netlify", icon: FaCode, color: "text-black" },
+  { name: "Figma", icon: FaFigma, color: "text-pink-400" },
+  { name: "Chrome", icon: FaChrome, color: "text-red-500" },
 ];
 
+// Individual skill card component with motion.div for animation
 const SkillCard = ({ skill }) => {
   const Icon = skill.icon;
   return (
-    <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-      <div
-        className={`bg-${skill.color} shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:bg-${skill.color}-700 hover:scale-105 hover:shadow-xl`}
-      >
-        <div className="px-6 py-4 bg-[#14083b]">
+    <motion.div
+      className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4"
+      initial={{ opacity: 0, translateX: 100 }}
+      animate={{ opacity: 1, translateX: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+    >
+      <div className="bg-[#14083b] shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
+        <div className="px-6 py-4">
           <div className="flex justify-center">
-            <Icon className="text-5xl" style={{ color: skill.color }} />
+            <Icon className={`text-5xl ${skill.color}`} />
           </div>
-          <div className={`font-bold text-xl mb-2 text-center text-white`}>
+          <div className="font-bold text-xl mb-2 text-center text-white">
             {skill.name}
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
+// Skills collection component
 const SkillsCollection = () => {
   return (
     <div className="bg-gray-600 w-full p-4">
