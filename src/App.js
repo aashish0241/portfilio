@@ -30,6 +30,7 @@ const App = () => {
     });
   }, []);
   return (
+    <div className="overflow-hidden">
     <Router>
       <Header />
       <Routes>
@@ -45,6 +46,7 @@ const App = () => {
       </Routes>
       <Footer />
     </Router>
+    </div>
   );
 };
 
