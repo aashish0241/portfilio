@@ -1,0 +1,43 @@
+/* about.css */
+
+/* Animation for sliding in from the right */
+@keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 0.8;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slideInRight {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideInRight 2.5s ease-in-out forwards;
+  }
+  
+  .animate-slideInRight.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Fade-in effect for text */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  

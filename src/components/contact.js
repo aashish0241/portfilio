@@ -1,20 +1,19 @@
 import React, { useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; 
-
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-  const form = useRef()
+  const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-  
+
     const formData = new FormData(form.current);
     const userName = formData.get("user_name");
     const userEmail = formData.get("user_email");
     const subject = formData.get("subject");
     const message = formData.get("message");
-  
+
     if (!userName || !userEmail || !subject || !message) {
       // Show error toast if any required field is empty
       toast.error("Please fill in all required fields.", {
@@ -28,7 +27,7 @@ const Contact = () => {
       });
       return;
     }
-  
+
     // Additional check for subject field
     if (!subject.trim()) {
       // Show error toast if subject field is empty
@@ -43,42 +42,52 @@ const Contact = () => {
       });
       return;
     }
-  
+
     emailjs
-      .sendForm('service_yqtgqwu', 'template_745as8n', form.current, 'IMh1Zycf42asKB0M2')
-      .then((result) => {
-        console.log(result.text);
-        toast.success("Message sent successfully! You will get a response soon.", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      }, (error) => {
-        console.log(error.text);
-        toast.error("Failed to send the message. Please try again later.", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      });
-  
+      .sendForm(
+        "service_yqtgqwu",
+        "template_745as8n",
+        form.current,
+        "IMh1Zycf42asKB0M2"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success(
+            "Message sent successfully! You will get a response soon.",
+            {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            }
+          );
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Failed to send the message. Please try again later.", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      );
+
     e.target.reset();
   };
-  
-  
+
   return (
     <>
       <section className="relative z-10 p-10  sm:p-10 lg:p-3 overflow-hidden bg-[#d1760f]  py-20 dark:bg-dark lg:py-[120px]">
-        <div className="container">
-          <ToastContainer/>
+        <div className="container" data-aos="zoom-out-up">
+          <ToastContainer />
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div className="mb-12 max-w-[570px] text-white lg:mb-0">
@@ -89,15 +98,16 @@ const Contact = () => {
                   GET IN TOUCH WITH US
                 </h2>
                 <p className="mb-9 ml-2 text-base leading-relaxed text-body-color dark:text-dark-6">
-                Hello! I'm Aashish Timsina, a dedicated and
-                 creative developer who thrives on transforming
-                 ideas into seamless digital experiences.
-                  With a strong foundation in frontend
-                  development and a constant hunger for
-                   learning, I am committed to pushing the
-                    boundaries of what's possible in the digital landscape.
+                  Hello! I'm Aashish Timsina, a dedicated and creative developer
+                  who thrives on transforming ideas into seamless digital
+                  experiences. With a strong foundation in frontend development
+                  and a constant hunger for learning, I am committed to pushing
+                  the boundaries of what's possible in the digital landscape.
                 </p>
-                <div className="mb-8 flex w-full max-w-[370px]">
+                <div
+                  className="mb-8 flex w-full max-w-[370px]"
+                  data-aos="flip-right"
+                >
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width="32"
@@ -188,7 +198,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+            <div className="w-full px-4 lg:w-1/2 xl:w-5/12" data-aos="flip-up">
               <div className="relative rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
                 <form ref={form} onSubmit={sendEmail}>
                   <ContactInputBox
@@ -210,7 +220,6 @@ const Contact = () => {
                     row="6"
                     placeholder="Your Message"
                     name="message"
-                    
                   />
                   <div>
                     <button

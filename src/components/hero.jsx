@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import photo from "../assets/aashishcollege.jpg";
 import {
   FaFacebook,
@@ -9,7 +9,6 @@ import {
 import { TbBrandUpwork } from "react-icons/tb";
 import aashishcv from "../assets/aashishcv.pdf";
 import { Link } from "react-router-dom";
-import "./hero.css";
 
 const Hero = () => {
   function openPDF() {
@@ -21,56 +20,17 @@ const Hero = () => {
     }
   }
 
-  useEffect(() => {
-    const elements = document.querySelectorAll(
-      ".animate-slideInRight, .animate-fadeIn, .animate-bounce, .animate-pulse"
-    );
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        } else {
-          entry.target.classList.remove("visible");
-        }
-      });
-    });
-
-    elements.forEach((element) => {
-      observer.observe(element);
-    });
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      elements.forEach((element) => {
-        observer.unobserve(element);
-      });
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const textElements = document.querySelectorAll(".animate-fadeIn");
-    const imageElements = document.querySelectorAll(".hero-image");
-
-    textElements.forEach((element) => {
-      const opacity = Math.min(1, scrollPosition / 400);
-      element.style.opacity = opacity;
-    });
-
-    imageElements.forEach((element) => {
-      const scale = 1 + scrollPosition / 1000;
-      element.style.transform = `scale(${scale})`;
-    });
-  };
-
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen w-full px-4 mx-auto md:flex-row sm:px-6 p-8 bg-[#fffff] md:py-20 py-10 overflow-hidden hero-container">
+    <div
+      aos-data=""
+      className=" relative flex flex-col items-center justify-center min-h-screen w-full px-4 mx-auto md:flex-row sm:px-6 p-8 bg-[#fffff] md:py-20 py-10 overflow-hidden hero-container"
+    >
       <div className="flex flex-col items-center justify-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
         <div className="text-left">
-          <h1 className="text-4xl font-extrabold leading-10 tracking-tight text-black sm:text-5xl sm:leading-none md:text-6xl animate-fadeIn">
+          <h1
+            aos-data="flip-down"
+            className="text-4xl font-extrabold leading-10 tracking-tight text-black sm:text-5xl sm:leading-none md:text-6xl animate-fadeIn"
+          >
             Hi, I'm <span className="text-blue-500">Aashish Timsina</span>
           </h1>
           <p className="mt-3 text-base text-gray-400 sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:text-white animate-fadeIn">
@@ -136,8 +96,11 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex items-center justify-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pl-10">
-        <div className="relative w-full p-3 rounded md:p-8 animate-slideInRight hero-image-container">
-          <div className="w-full flex justify-center items-center rounded-lg bg-transparent text-black">
+        <div className="relative w-full p-3 rounded md:p-8  hero-image-container">
+          <div
+            data-aos="flip-left"
+            className="w-full flex justify-center items-center rounded-lg bg-transparent text-black"
+          >
             <img
               src={photo}
               alt="Aashish Timsina"

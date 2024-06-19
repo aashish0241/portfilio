@@ -21,11 +21,14 @@ const cards = [
 
 const Certificate = () => {
   return (
-    <section className='className="overflow-hidden pt-1 pb-14 lg:pt-[10px] bg-[#161b57]  lg:pb-[90px] dark:bg-dark'>
-      <div className="container mx-auto p-8 bg-[#161b57] overflow-hidden pt-1 pb-12 lg:pt-[10px]   lg:pb-[90px] dark:bg-dark">
+    <section className='className="overflow-hidden pt-1 pb-14 lg:pt-[10px] bg-gray-200  lg:pb-[90px] dark:bg-dark'>
+      <div
+        data-aos="flip-right"
+        className="container mx-auto p-8 bg-gray-200 overflow-hidden pt-1 pb-12 lg:pt-[10px]   lg:pb-[90px] dark:bg-dark"
+      >
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mt-7 text-white">My Certificate</h1>
-          <p className="text-lg font-bold text-[#0cf5b3]">
+          <h1 className="text-4xl font-bold mt-7 text-black">My Certificate</h1>
+          <p className="text-lg font-bold text-[#4b7dd8]">
             Check Out My Work Progress in different sector
           </p>
         </div>
@@ -38,21 +41,24 @@ const Certificate = () => {
               rel="noopener noreferrer"
               className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 transition-transform transform hover:scale-105"
             >
-              <div className="relative h-64 rounded-lg overflow-hidden">
+              <div
+                className="relative h-70 rounded-lg overflow-hidden shadow-2xl p-2"
+                data-aos="flip-left"
+              >
                 <div>
                   <img
                     src={card.image}
                     alt={`Project ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
-                  <h2 className="text-2xl text-white font-bold mb-2">
+                  <h2 className="text-2xl h-auto text-black font-bold mb-2">
                     {card.title}
                   </h2>
                   <div
                     className="absolute top-0 left-0 w-full h-full bg-black opacity-0 hover:opacity-70 transition-opacity 
               duration-300 flex flex-col justify-center items-center text-white"
                   >
-                    <p className="text-gray-300 m-1 text-center">
+                    <p className="text-gray-300 m-1 h-auto text-center">
                       {card.description}
                     </p>
                   </div>

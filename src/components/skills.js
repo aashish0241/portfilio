@@ -45,7 +45,10 @@ const SkillCard = ({ skill }) => {
       animate={{ opacity: 1, translateX: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
     >
-      <div className="bg-[#14083b] shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl">
+      <div
+        data-aos="flip-left"
+        className="bg-[#14083b] shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
+      >
         <div className="px-6 py-4">
           <div className="flex justify-center">
             <Icon className={`text-5xl ${skill.color}`} />
@@ -62,8 +65,12 @@ const SkillCard = ({ skill }) => {
 // Skills collection component
 const SkillsCollection = () => {
   return (
-    <div className="bg-gray-600 w-full p-4">
-      <h1 className="text-4xl font-bold text-center py-8 text-white">
+    <div
+      className="bg-gray-50 w-full p-4"
+      data-aos-duration="2500"
+      data-aos="flip-right"
+    >
+      <h1 className="text-4xl font-bold text-center py-8 text-black">
         My <span className="text-blue-600">Skills</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center">
