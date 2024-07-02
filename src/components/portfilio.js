@@ -32,7 +32,7 @@ const Portfilio = () => {
   return (
     <section className='className="overflow-hidden pt-1 pb-12 lg:pt-[10px] bg-[#c9cbda]   lg:pb-[90px] dark:bg-dark'>
       <div
-        data-aos="zoom-out"
+        data-aos="fade-down"
         className="container mx-auto p-8 bg-[#c9cbda] overflow-hidden pt-1 pb-12 lg:pt-[10px]   lg:pb-[90px] dark:bg-dark"
       >
         <div className="text-center mb-8">
@@ -52,7 +52,7 @@ const Portfilio = () => {
             >
               <div
                 className="relative h-64 rounded-lg overflow-hidden"
-                data-aos="fade-down-right"
+                data-aos="fade-down"
               >
                 <div>
                   <img

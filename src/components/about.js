@@ -10,7 +10,7 @@ const About1 = () => {
 
   return (
     <section
-      data-aos="flip-down"
+      data-aos="ease-out-back"
       className="about-section w-full overflow-hidden transition-all duration-3000 shadow-2xl shadow-red-300 pt-20 pb-12 pl-3 lg:pt-[120px] bg-[#ffff] lg:pb-[90px]"
     >
       <h1 className="flex justify-center items-center m-1 text-6xl font-bold text-black">
@@ -21,7 +21,7 @@ const About1 = () => {
           <div className="w-full px-4 lg:w-6/12">
             <div className="flex items-center -mx-3 sm:-mx-4">
               <div className="w-full px-3 sm:px-4 xl:w-1/2">
-                <div className="py-3 sm:py-4" data-aos="flip-left">
+                <div className="py-3 sm:py-4" data-aos="fade-down">
                   <img
                     src={AashishJersery}
                     alt=""

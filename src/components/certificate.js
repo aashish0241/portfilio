@@ -21,9 +21,9 @@ const cards = [
 
 const Certificate = () => {
   return (
-    <section className='className="overflow-hidden pt-1 pb-14 lg:pt-[10px] bg-gray-200  lg:pb-[90px] dark:bg-dark'>
+    <section className="overflow-hidden pt-1 pb-14 lg:pt-[10px] bg-gray-200  lg:pb-[90px] dark:bg-dark">
       <div
-        data-aos="flip-right"
+        data-aos="fade-down"
         className="container mx-auto p-8 bg-gray-200 overflow-hidden pt-1 pb-12 lg:pt-[10px]   lg:pb-[90px] dark:bg-dark"
       >
         <div className="text-center mb-8">
@@ -43,7 +43,7 @@ const Certificate = () => {
             >
               <div
                 className="relative h-70 rounded-lg overflow-hidden shadow-2xl p-2"
-                data-aos="flip-left"
+                data-aos="fade-down"
               >
                 <div>
                   <img

@@ -51,7 +51,7 @@ const Service = () => {
   return (
     <section className="overflow-hidden pt-1 pb-12 lg:pt-[10px]  bg-[#a392b4] lg:pb-[90px] dark:bg-dark">
       <div
-        data-aos="zoom-in-up"
+        data-aos="fade-down"
         className="overflow-hidden pt-2 pb-12 lg:pt-[12px]  bg-[#a392b4] lg:pb-[90px] dark:bg-dark"
       >
         <div className="text-center mb-8">
@@ -65,7 +65,7 @@ const Service = () => {
             <div
               key={index}
               className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4"
-              data-aos="flip-right"
+              data-aos="fade-down"
             >
               <div className="flex flex-col h-full bg-gray-800 shadow-lg rounded-lg overflow-hidden">
                 <div className="flex justify-center p-4">{card.icon}</div>

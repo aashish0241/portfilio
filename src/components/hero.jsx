@@ -33,10 +33,10 @@ const Hero = () => {
           >
             Hi, I'm <span className="text-blue-500">Aashish Timsina</span>
           </h1>
-          <p className="mt-3 text-base text-gray-400 sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:text-white animate-fadeIn">
+          <p className="mt-3 text-base text-black font-bold sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:text-white animate-fadeIn">
             Mern Stack Developer
           </p>
-          <p className="mt-3 text-base text-gray-400 sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:font-bold animate-fadeIn">
+          <p className="mt-3 text-base text-black sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:font-bold animate-fadeIn">
             Hello! I'm Aashish Timsina, a dedicated and creative developer who
             thrives on transforming ideas into seamless digital experiences.
             With a strong foundation in frontend development and a constant

@@ -86,7 +86,7 @@ const Contact = () => {
   return (
     <>
       <section className="relative z-10 p-10  sm:p-10 lg:p-3 overflow-hidden bg-[#d1760f]  py-20 dark:bg-dark lg:py-[120px]">
-        <div className="container" data-aos="zoom-out-up">
+        <div className="container" data-aos="fade-right-up">
           <ToastContainer />
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
@@ -106,7 +106,7 @@ const Contact = () => {
                 </p>
                 <div
                   className="mb-8 flex w-full max-w-[370px]"
-                  data-aos="flip-right"
+                  data-aos="fade-right"
                 >
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
@@ -198,7 +198,10 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 lg:w-1/2 xl:w-5/12" data-aos="flip-up">
+            <div
+              className="w-full px-4 lg:w-1/2 xl:w-5/12"
+              data-aos="fade-right"
+            >
               <div className="relative rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
                 <form ref={form} onSubmit={sendEmail}>
                   <ContactInputBox

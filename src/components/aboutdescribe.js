@@ -6,7 +6,7 @@ const AboutDescribe = () => {
     <div className="overflow-hidden w-full  text-black pb-12 lg:pt-[1px]   lg:pb-[90px] dark:bg-dark">
       <div className="p-1 m-6">
         <About1 />
-        <div data-aos="flip-up" className="text-black ">
+        <div data-aos="fade-down" className="text-black ">
           <p className="font-bold flex justify-center items-center text-2xl mb-4">
             About Me:
           </p>
@@ -22,7 +22,7 @@ const AboutDescribe = () => {
         </div>
 
         <hr className="my-4 border-t-2 border-gray-300" />
-        <div data-aos="flip-up" className="text-black ">
+        <div data-aos="fade-down" className="text-black ">
           <p className="font-bold flex justify-center items-center text-2xl mb-4">
             Web Development:
           </p>
@@ -38,7 +38,7 @@ const AboutDescribe = () => {
 
           <hr className="my-4 border-t-2 border-gray-300" />
         </div>
-        <div data-aos="flip-up" className="text-black ">
+        <div data-aos="fade-down" className="text-black ">
           <p className="font-bold flex justify-center items-center text-2xl mb-4">
             Blogging:
           </p>
@@ -53,7 +53,7 @@ const AboutDescribe = () => {
 
           <hr className="my-4 border-t-2 border-gray-300" />
         </div>
-        <div data-aos="flip-up" className="text-black ">
+        <div data-aos="fade-down" className="text-black ">
           <p className="font-bold flex justify-center items-center text-2xl mb-4">
             Freelancing:
           </p>
@@ -67,7 +67,7 @@ const AboutDescribe = () => {
           </p>
         </div>
         <hr className="my-4 border-t-2 border-gray-300" />
-        <div data-aos="flip-up" className="text-black ">
+        <div data-aos="fade-down" className="text-black ">
           <p className="font-bold flex justify-center items-center text-2xl mb-4">
             Achievements:
           </p>
@@ -90,7 +90,7 @@ const AboutDescribe = () => {
           <hr className="my-4 border-t-2 border-gray-300" />
         </div>
 
-        <div data-aos="flip-up" className="text-black ">
+        <div data-aos="fade-down" className="text-black ">
           <p className="font-bold flex justify-center items-center text-2xl mb-4">
             Future Endeavors:
           </p>
