@@ -1,6 +1,7 @@
 import React from "react";
 import Laptop from "../assets/udemycertificate.jpg";
 import School from "../assets/school.png";
+import NodeJS from "../assets/nodejscertificate.png";
 
 const cards = [
   {
@@ -16,6 +17,13 @@ const cards = [
     description:
       "Designing websites and web applications that adapt to various devices and screen sizes.",
     link: "http://bindhyeshwori.netlify.app/",
+  },
+  {
+    image: NodeJS,
+    title: "Certificate of Nodejs From Hacker Rank",
+    description:
+      "It covers topics like Package and Modules Management, Callbacks, Event Loop, Event Emitter, Buffers, Streams and File Systems.",
+    link: "https://www.hackerrank.com/certificates/081d9eea2337",
   },
 ];
 

@@ -33,6 +33,7 @@ const skills = [
   { name: "Netlify", icon: FaCode, color: "text-black" },
   { name: "Figma", icon: FaFigma, color: "text-pink-400" },
   { name: "Chrome", icon: FaChrome, color: "text-red-500" },
+  { name: "fireBase", icon: FaCode, color: "text-red-500" },
 ];
 
 // Individual skill card component with motion.div for animation
