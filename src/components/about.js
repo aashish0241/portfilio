@@ -13,9 +13,9 @@ const About1 = () => {
       data-aos="ease-out-back"
       className="about-section w-full overflow-hidden transition-all duration-3000 shadow-2xl shadow-red-300 pt-20 pb-12 pl-3 lg:pt-[120px] bg-[#ffff] lg:pb-[90px]"
     >
-      <h1 className="flex justify-center items-center m-1 text-6xl font-bold text-black">
+      <h2 className="flex justify-center items-center m-1 text-6xl font-bold text-black">
         About <span className="text-yellow-800 p-2">Me</span>
-      </h1>
+      </h2>
       <div className="container mx-auto">
         <div className="flex flex-wrap items-center justify-between -mx-4">
           <div className="w-full px-4 lg:w-6/12">
