@@ -31,12 +31,7 @@ const Hero = () => {
             Mern Stack Developer
           </p>
           <p className="mt-3 text-base text-gray-700 sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:font-bold animate-fadeIn">
-            Hello! I'm Aashish Timsina, a dedicated and creative developer who
-            thrives on transforming ideas into seamless digital experiences.
-            With a strong foundation in frontend development and a constant
-            hunger for learning, I am committed to pushing the boundaries of
-            what's possible in the digital landscape.
-          </p>
+          Hello! I'm Aashish Timsina, a passionate mern developer specializing in backend systems. I excel in crafting scalable and efficient server-side solutions while also enjoying frontend challenges. Dedicated to pushing the limits of digital innovation, I’m always eager to learn and grow in the tech landscape. </p>
           <div className="mt-5 sm:flex md:mt-8 animate-bounce">
             <div className="rounded-md shadow">
               <Link
