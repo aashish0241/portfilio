@@ -2,74 +2,78 @@ import React from "react";
 import Laptop from "../assets/udemycertificate.jpg";
 import School from "../assets/school.png";
 import NodeJS from "../assets/nodejscertificate.png";
+import MYSQL from "../assets/sqlcertificate.png";
 
+// Certificate data
 const cards = [
   {
     image: Laptop,
-    title: "Udemy Certificate of Mern Stack.",
+    title: "Udemy Certificate of MERN Stack",
     description:
       "Creating fully customized web applications from scratch to meet your unique requirements.",
     link: "https://aashish4756.blogspot.com",
   },
   {
     image: School,
-    title: "School Event and Libary  with admin Panel",
+    title: "School Event and Library with Admin Panel",
     description:
       "Designing websites and web applications that adapt to various devices and screen sizes.",
     link: "http://bindhyeshwori.netlify.app/",
   },
   {
     image: NodeJS,
-    title: "Certificate of Nodejs From Hacker Rank",
+    title: "Certificate of NodeJS from HackerRank",
     description:
-      "It covers topics like Package and Modules Management, Callbacks, Event Loop, Event Emitter, Buffers, Streams and File Systems.",
+      "Covers topics like Package Management, Event Loop, Buffers, Streams, and File Systems.",
+    link: "https://www.hackerrank.com/certificates/081d9eea2337",
+  },
+  {
+    image: MYSQL,
+    title: "Certificate of SQL from HackerRank",
+    description:
+      "Covers topics like queries, relationships, and aggregators.",
     link: "https://www.hackerrank.com/certificates/081d9eea2337",
   },
 ];
 
+// Certificate component
 const Certificate = () => {
   return (
-    <section className="overflow-hidden pt-1 pb-14 lg:pt-[10px] bg-gray-200  lg:pb-[90px] dark:bg-dark">
-      <div
-        data-aos="fade-down"
-        className="container mx-auto p-8 bg-gray-200 overflow-hidden pt-1 pb-12 lg:pt-[10px]   lg:pb-[90px] dark:bg-dark"
-      >
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mt-7 text-black">My Certificate</h1>
-          <p className="text-lg font-bold text-[#4b7dd8]">
-            Check Out My Work Progress in different sector
+    <section className="pt-8 pb-16 lg:pt-12 lg:pb-20 bg-gradient-to-r from-teal-200 to-blue-600">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-white">My Certificates</h1>
+          <p className="text-lg text-white mt-2">
+            Explore my achievements and projects
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-8">
           {cards.map((card, index) => (
             <a
               key={index}
               href={card.link}
-              target="_blank" // Open link in a new tab
+              target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 transition-transform transform hover:scale-105"
+              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 transform transition-transform duration-300 hover:scale-105"
             >
-              <div
-                className="relative h-70 rounded-lg overflow-hidden shadow-2xl p-2"
-                data-aos="fade-down"
-              >
-                <div>
-                  <img
-                    src={card.image}
-                    alt={`Project ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                  <h2 className="text-2xl h-auto text-black font-bold mb-2">
+              <div className="relative rounded-lg overflow-hidden bg-white border-2 dark:bg-gray-900 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-56 object-cover transition-transform duration-300 hover:scale-110"
+                />
+                <div className="p-4">
+                  <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
                     {card.title}
                   </h2>
-                  <div
-                    className="absolute top-0 left-0 w-full h-full bg-black opacity-0 hover:opacity-70 transition-opacity 
-              duration-300 flex flex-col justify-center items-center text-white"
-                  >
-                    <p className="text-gray-300 m-1 h-auto text-center">
-                      {card.description}
-                    </p>
-                  </div>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                    {card.description}
+                  </p>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-center justify-center text-center p-4">
+                  <p className="text-white text-sm">
+                    {card.description}
+                  </p>
                 </div>
               </div>
             </a>

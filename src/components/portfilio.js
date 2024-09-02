@@ -13,66 +13,66 @@ const cards = [
   },
   {
     image: Findjob,
-    title: "Find job for worker",
+    title: "Find Job for Worker",
     description:
-      "Creating fully customized web applications from scratch to meet your unique requirements.",
+      "Helping workers find suitable job opportunities through a streamlined platform.",
     link: "https://jobfindernepal.netlify.app/find-jobs",
   },
-
   {
     image: School,
-    title: "School Event and Libary  with admin Panel",
+    title: "School Event and Library with Admin Panel",
     description:
-      "Designing websites and web applications that adapt to various devices and screen sizes.",
+      "A comprehensive system for managing school events and library resources with an admin panel.",
     link: "http://bindhyeshwori.netlify.app/",
   },
 ];
 
 const Portfilio = () => {
   return (
-    <section className='className="overflow-hidden pt-1 pb-12 lg:pt-[10px] bg-[#c9cbda]   lg:pb-[90px] dark:bg-dark'>
-      <div
-        data-aos="fade-down"
-        className="container mx-auto p-8 bg-[#c9cbda] overflow-hidden pt-1 pb-12 lg:pt-[10px]   lg:pb-[90px] dark:bg-dark"
-      >
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mt-7 text-black">My Portfolio</h1>
-          <p className="text-lg font-bold text-[#484acc]">
-            Check Out My Work In Various Categories
+    <section className="pt-10 pb-16 bg-[#f0f4f8] bg-gradient-to-r from-teal-300 to-blue-600">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+            My Portfolio
+          </h1>
+          <p className="text-lg font-medium text-gray-600 dark:text-gray-400">
+            Check Out My Work in Various Categories
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-6">
           {cards.map((card, index) => (
             <a
               key={index}
               href={card.link}
               target="_blank" // Open link in a new tab
               rel="noopener noreferrer"
-              className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 transition-transform transform hover:scale-105"
+              className="relative flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 transition-transform transform hover:scale-105"
             >
-              <div
-                className="relative h-64 rounded-lg overflow-hidden"
-                data-aos="fade-down"
-              >
-                <div>
-                  <img
-                    src={card.image}
-                    alt={`Project ${index + 1}`}
-                    className="w-full h-[80%] object-cover"
-                  />
-                  <h2 className="text-2xl text-black font-bold mb-2">
+              <div className="relative rounded-lg overflow-hidden bg-white shadow-lg dark:bg-gray-800 dark:shadow-lg transition-shadow duration-300 hover:shadow-xl">
+                <img
+                  src={card.image}
+                  alt={`Project ${index + 1}`}
+                  className="w-full h-64 object-cover transition-transform transform hover:scale-110"
+                />
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-90 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center"
+                >
+                  <h2 className="text-xl font-semibold text-white mb-2">
                     {card.title}
                   </h2>
-                  <div
-                    className="absolute top-0 left-0 w-full h-full bg-black opacity-0 hover:opacity-70 transition-opacity 
-              duration-300 flex flex-col justify-center items-center text-black"
-                  >
-                    <p className="text-black text-center">{card.description}</p>
-                  </div>
+                  <p className="text-white">{card.description}</p>
                 </div>
               </div>
             </a>
           ))}
+        </div>
+        <div className="text-center mt-12">
+          <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">
+            Not Hosted Projects Are Available on GitHub
+          </h3>
+          <p className="text-gray-600 dark:text-gray-400 mt-2">
+            Check out my GitHub profile for more projects and code samples.
+          </p>
         </div>
       </div>
     </section>

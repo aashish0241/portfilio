@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   function openPDF() {
     var pdfURL = aashishcv;
-
     var win = window.open(pdfURL, "_blank");
     if (!win || win.closed || typeof win.closed == "undefined") {
       window.location.href = pdfURL;
@@ -21,22 +20,17 @@ const Hero = () => {
   }
 
   return (
-    <div
-      aos-data=""
-      className=" relative flex flex-col items-center justify-center min-h-screen w-full px-4 mx-auto md:flex-row sm:px-6 p-8 bg-[#fffff] md:py-20 py-10 overflow-hidden hero-container"
-    >
+    <div className="relative flex flex-col items-center justify-center min-h-screen w-full px-4 mx-auto md:flex-row sm:px-6 p-8 bg-white md:py-20 py-10 overflow-hidden hero-container">
+      {/* Left Section */}
       <div className="flex flex-col items-center justify-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
         <div className="text-left">
-          <h1
-            aos-data="flip-down"
-            className="text-4xl font-extrabold leading-10 tracking-tight text-black sm:text-5xl sm:leading-none md:text-6xl animate-fadeIn"
-          >
+          <h1 className="text-4xl font-extrabold leading-10 tracking-tight text-black sm:text-5xl sm:leading-none md:text-6xl animate-fadeIn">
             Hi, I'm <span className="text-blue-500">Aashish Timsina</span>
           </h1>
-          <p className="mt-3 text-base text-black font-bold sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:text-white animate-fadeIn">
+          <p className="mt-3 text-base text-black font-bold sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:text-gray-700 animate-fadeIn">
             Mern Stack Developer
           </p>
-          <p className="mt-3 text-base text-black sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:font-bold animate-fadeIn">
+          <p className="mt-3 text-base text-gray-700 sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:font-bold animate-fadeIn">
             Hello! I'm Aashish Timsina, a dedicated and creative developer who
             thrives on transforming ideas into seamless digital experiences.
             With a strong foundation in frontend development and a constant
@@ -55,13 +49,13 @@ const Hero = () => {
             <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
               <button
                 onClick={openPDF}
-                className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-blue-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-blue-600 focus:outline-none focus:shadow-outline-blue md:py-4 md:text-lg md:px-10"
+                className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-blue-500 transition duration-150 ease-in-out bg-white border border-blue-500 rounded-md hover:bg-blue-50 focus:outline-none focus:shadow-outline-blue md:py-4 md:text-lg md:px-10"
               >
                 My CV
               </button>
             </div>
           </div>
-          <div className="flex   gap-4 mt-4 sm:mt-12 lg:mt-12 pb-8 justify-center lg:justify-start text-3xl sm:text-5xl lg:text-6xl animate-pulse">
+          <div className="flex gap-4 mt-4 sm:mt-12 lg:mt-12 pb-8 justify-center lg:justify-start text-3xl sm:text-5xl lg:text-6xl animate-pulse">
             <a
               href="https://www.facebook.com/profile.php?id=100053096056726"
               className="transition-transform transform hover:scale-110"
@@ -95,8 +89,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Right Section */}
       <div className="flex items-center justify-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pl-10">
-        <div className="relative w-full p-3 rounded md:p-8  hero-image-container">
+        <div className="relative w-full p-3 rounded md:p-8 hero-image-container">
           <div
             data-aos="flip-left"
             className="w-full flex justify-center items-center rounded-lg bg-transparent text-black"

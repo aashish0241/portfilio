@@ -85,7 +85,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="relative z-10 p-10  sm:p-10 lg:p-3 overflow-hidden bg-[#d1760f]  py-20 dark:bg-dark lg:py-[120px]">
+      <section className="relative z-10 p-10  sm:p-10 lg:p-3 overflow-hidden bg-[#d1760f]  py-20 bg-gradient-to-r from-teal-500 to-blue-600 lg:py-[120px]">
         <div className="container" data-aos="fade-right-up">
           <ToastContainer />
           <div className="-mx-4 flex flex-wrap lg:justify-between">

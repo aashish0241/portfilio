@@ -3,17 +3,16 @@ import About1 from "./about";
 
 const AboutDescribe = () => {
   return (
-    <div className="overflow-hidden w-full  text-black pb-12 lg:pt-[1px]   lg:pb-[90px] dark:bg-dark">
-      <div className="p-1 m-6">
-        <About1 />
-        <div data-aos="fade-down" className="text-black ">
-          <p className="font-bold flex justify-center items-center text-2xl mb-4">
-            About Me:
-          </p>
+    <div className="w-full text-black pb-12 lg:pt-8 lg:pb-24 dark:bg-dark">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="mb-12">
+          <About1 />
+        </div>
 
-          <hr className="my-4 border-t-2 border-gray-300" />
-
-          <p>
+        <div data-aos="fade-down" className="text-black dark:text-white">
+          <p className="font-bold text-3xl mb-6 text-center">About Me:</p>
+          <hr className="my-6 border-t-2 border-gray-300 dark:border-gray-700" />
+          <p className="mb-6">
             I was born on August 17, 2003, in the charming town of Pokhara,
             Nepal. My journey into the world of web development, blogging, and
             freelancing has been a rewarding and exciting one. Here's a closer
@@ -21,12 +20,9 @@ const AboutDescribe = () => {
           </p>
         </div>
 
-        <hr className="my-4 border-t-2 border-gray-300" />
-        <div data-aos="fade-down" className="text-black ">
-          <p className="font-bold flex justify-center items-center text-2xl mb-4">
-            Web Development:
-          </p>
-          <p>
+        <div data-aos="fade-down" className="text-black dark:text-white">
+          <p className="font-bold text-2xl mb-4">Web Development:</p>
+          <p className="mb-6">
             My fascination with web development ignited at a young age when I
             started learning the basics of HTML, CSS, and JavaScript. Over the
             years, I've diligently improved my skills, delving into advanced
@@ -36,13 +32,12 @@ const AboutDescribe = () => {
             solutions.
           </p>
 
-          <hr className="my-4 border-t-2 border-gray-300" />
+          <hr className="my-6 border-t-2 border-gray-300 dark:border-gray-700" />
         </div>
-        <div data-aos="fade-down" className="text-black ">
-          <p className="font-bold flex justify-center items-center text-2xl mb-4">
-            Blogging:
-          </p>
-          <p>
+
+        <div data-aos="fade-down" className="text-black dark:text-white">
+          <p className="font-bold text-2xl mb-4">Blogging:</p>
+          <p className="mb-6">
             My passion for writing led me to start a blog where I share insights
             and experiences from the tech world. My blog covers a wide range of
             topics, including web development tutorials and industry trends.
@@ -51,13 +46,12 @@ const AboutDescribe = () => {
             enthusiasts.
           </p>
 
-          <hr className="my-4 border-t-2 border-gray-300" />
+          <hr className="my-6 border-t-2 border-gray-300 dark:border-gray-700" />
         </div>
-        <div data-aos="fade-down" className="text-black ">
-          <p className="font-bold flex justify-center items-center text-2xl mb-4">
-            Freelancing:
-          </p>
-          <p>
+
+        <div data-aos="fade-down" className="text-black dark:text-white">
+          <p className="font-bold text-2xl mb-4">Freelancing:</p>
+          <p className="mb-6">
             My proficiency in web development and blogging opened doors to
             freelancing opportunities. I've completed numerous successful
             freelance projects for clients worldwide. My ability to understand
@@ -66,12 +60,10 @@ const AboutDescribe = () => {
             content creator.
           </p>
         </div>
-        <hr className="my-4 border-t-2 border-gray-300" />
-        <div data-aos="fade-down" className="text-black ">
-          <p className="font-bold flex justify-center items-center text-2xl mb-4">
-            Achievements:
-          </p>
-          <ul className="list-disc pl-6">
+
+        <div data-aos="fade-down" className="text-black dark:text-white">
+          <p className="font-bold text-2xl mb-4">Achievements:</p>
+          <ul className="list-disc pl-6 mb-6">
             <li>
               I've received recognition for my web development skills, with
               several of my projects featured on web development platforms and
@@ -86,15 +78,11 @@ const AboutDescribe = () => {
               my freelance work's quality and professionalism.
             </li>
           </ul>
-
-          <hr className="my-4 border-t-2 border-gray-300" />
         </div>
 
-        <div data-aos="fade-down" className="text-black ">
-          <p className="font-bold flex justify-center items-center text-2xl mb-4">
-            Future Endeavors:
-          </p>
-          <p>
+        <div data-aos="fade-down" className="text-black dark:text-white">
+          <p className="font-bold text-2xl mb-4">Future Endeavors:</p>
+          <p className="mb-6">
             I remain committed to pushing the boundaries of my skills and
             knowledge in the ever-evolving field of web development. I aspire to
             contribute to open-source projects, collaborate with industry
@@ -102,11 +90,7 @@ const AboutDescribe = () => {
             audience.
           </p>
 
-          <hr className="my-4 border-t-2 border-gray-300" />
-
-          <p className="font-bold flex justify-center items-center text-2xl mb-4">
-            Conclusion:
-          </p>
+          <p className="font-bold text-2xl mb-4">Conclusion:</p>
           <p>
             Born in Pokhara, Nepal, in 2003, my journey in web development,
             blogging, and freelancing has been marked by growth and achievement.

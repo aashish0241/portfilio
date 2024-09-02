@@ -22,6 +22,26 @@
     opacity: 1;
     transform: translateX(0);
   }
+  .about-section {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .about-section:hover {
+    transform: scale(1.02);
+  }
+  
+  .about-section h2 span {
+    color: #ffcc00; /* Adjusted for better visibility */
+  }
+  
+  .about-button {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-button:hover {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
   
   /* Fade-in effect for text */
   @keyframes fadeIn {

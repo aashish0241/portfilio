@@ -49,38 +49,44 @@ const cards = [
 
 const Service = () => {
   return (
-    <section className="overflow-hidden pt-1 pb-12 lg:pt-[10px]  bg-[#a392b4] lg:pb-[90px] dark:bg-dark">
-      <div
-        data-aos="fade-down"
-        className="overflow-hidden pt-2 pb-12 lg:pt-[12px]  bg-[#a392b4] lg:pb-[90px] dark:bg-dark"
-      >
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold mt-7 text-white">My Services</h1>
-          <p className=" lg:text-5xl sm:text-3xl font-bold text-[#0cf5b3]">
-            Expertise That Powers Your Web Success
-          </p>
-        </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4"
-              data-aos="fade-down"
-            >
-              <div className="flex flex-col h-full bg-gray-800 shadow-lg rounded-lg overflow-hidden">
-                <div className="flex justify-center p-4">{card.icon}</div>
-                <div className="flex flex-col justify-between px-6 py-4 h-full">
-                  <h2 className="text-2xl font-bold mb-2 text-center text-white">
-                    {card.title}
-                  </h2>
-                  <p className="text-gray-300 text-center">
-                    {card.description}
-                  </p>
-                </div>
+    <section className="overflow-hidden pt-8 pb-16 bg-gradient-to-r from-teal-400 to-blue-600 dark:bg-dark">
+     
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-extrabold text-white mb-4">My Services</h1>
+        <p className="text-lg font-semibold text-white">
+          Expertise That Powers Your Web Success
+        </p>
+      </div>
+      <div className="flex flex-wrap justify-center gap-6">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4"
+            data-aos="fade-up"
+            aria-labelledby={`service-title-${index}`}
+            aria-describedby={`service-desc-${index}`}
+          >
+            <div className="flex flex-col h-full bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+              <div className="flex justify-center p-6 bg-white">
+                {card.icon}
+              </div>
+              <div className="flex flex-col justify-between px-6 py-4">
+                <h2
+                  id={`service-title-${index}`}
+                  className="text-xl font-semibold mb-2 text-center text-gray-800"
+                >
+                  {card.title}
+                </h2>
+                <p
+                  id={`service-desc-${index}`}
+                  className="text-gray-600 text-center"
+                >
+                  {card.description}
+                </p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
