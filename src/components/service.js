@@ -17,9 +17,9 @@ const cards = [
   },
   {
     icon: <FaMobileAlt className="text-5xl text-green-500" />,
-    title: "Responsive Design",
+    title: "Real-Time Communication System",
     description:
-      "Designing websites and web applications that adapt to various devices and screen sizes.",
+      "Developing real-time communication systems for instant messaging, video, and audio sharing, enhancing user interactions.",
   },
   {
     icon: <FaCode className="text-5xl text-yellow-500" />,
@@ -50,7 +50,6 @@ const cards = [
 const Service = () => {
   return (
     <section className="overflow-hidden pt-8 pb-16 bg-gradient-to-r from-teal-400 to-blue-600 dark:bg-dark">
-     
       <div className="text-center mb-12">
         <h1 className="text-4xl font-extrabold text-white mb-4">My Services</h1>
         <p className="text-lg font-semibold text-white">

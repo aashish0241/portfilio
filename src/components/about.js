@@ -29,12 +29,12 @@ const About1 = () => {
           </div>
           <div className="w-full lg:w-5/12">
             <h3 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
-              MERN Stack Developer
+             Backend Developer
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               My journey in the world of development began with a curiosity to
               understand how technology shapes our lives. Starting with basic
-              coding exercises, I quickly found my passion in frontend
+              coding exercises, I quickly found my passion in backend
               development – the art of crafting visually appealing and
               user-friendly interfaces that bridge the gap between users and
               technology.

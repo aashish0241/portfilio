@@ -28,10 +28,13 @@ const Hero = () => {
             Hi, I'm <span className="text-blue-500">Aashish Timsina</span>
           </h1>
           <p className="mt-3 text-base text-black font-bold sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:text-gray-700 animate-fadeIn">
-            Mern Stack Developer
+            Backend Developer
           </p>
           <p className="mt-3 text-base text-gray-700 sm:text-lg md:mt-5 md:text-xl transition-all duration-300 hover:font-bold animate-fadeIn">
-          Hello! I'm Aashish Timsina, a passionate mern developer specializing in backend systems. I excel in crafting scalable and efficient server-side solutions while also enjoying frontend challenges. Dedicated to pushing the limits of digital innovation, I’m always eager to learn and grow in the tech landscape. </p>
+          I’m a backend developer specializing in building scalable, secure, and efficient server-side systems. With expertise in MongoDB, Express.js, Node.js,mysql, and other cutting-edge technologies, I create solutions that power seamless digital experiences.
+Driven by curiosity and innovation, I’m always learning and pushing boundaries in the tech world.
+
+ </p>
           <div className="mt-5 sm:flex md:mt-8 animate-bounce">
             <div className="rounded-md shadow">
               <Link
@@ -70,7 +73,7 @@ const Hero = () => {
               <FaGithubSquare className="text-black rounded-md hover:text-gray-600" />
             </a>
             <a
-              href="https://www.linkedin.com/in/aashish-timsina-663ab02a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              href="https://www.linkedin.com/in/aashish-timsina-663ab02a8"
               className="transition-transform transform hover:scale-110"
             >
               <FaLinkedin className="text-blue-500 rounded-md hover:text-blue-700" />

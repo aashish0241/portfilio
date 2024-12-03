@@ -11,7 +11,7 @@ const cards = [
     title: "Udemy Certificate of MERN Stack",
     description:
       "Creating fully customized web applications from scratch to meet your unique requirements.",
-    link: "https://aashish4756.blogspot.com",
+    link: "https://www.udemy.com/certificate/UC-b3bbdde9-5545-411f-b9ae-a4f3ef360761/",
   },
   {
     image: School,

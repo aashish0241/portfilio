@@ -10,8 +10,10 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Certificate from "./components/certificate";
 import Error10 from "./components/error";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 
 const App = () => {
   useEffect(() => {
@@ -22,7 +24,6 @@ const App = () => {
       mirror: false,
       offset: 100,
       delay: 300,
-      
     });
     AOS.refresh();
   }, []);
