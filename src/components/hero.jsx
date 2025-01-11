@@ -7,7 +7,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import { TbBrandUpwork } from "react-icons/tb";
-import aashishcv from "../assets/aashishcv.pdf";
+import aashishcv from "../assets/aashishcv2.pdf";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
