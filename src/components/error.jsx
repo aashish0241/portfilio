@@ -35,7 +35,7 @@ const Error = () => {
         </p>
 
         <Link href="/">
-          <a className="w-full lg:w-auto my-4 border rounded-md px-1 sm:px-16 py-5 bg-primary-600 text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-700 focus:ring-opacity-50 inline-block">
+          <a className="w-full lg:w-auto my-4 border rounded-md px-1 sm:px-16 py-5 bg-primary-600 text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-700 focus:ring-opacity-50 inline-block" href="/">
             Go back to Homepage
           </a>
         </Link>

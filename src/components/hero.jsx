@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import TechBackground from "./TechBackground";
-import { Link } from "wouter";
 import {
   FaFacebook,
   FaInstagram,
@@ -97,7 +96,9 @@ const Hero = () => {
             <div className="text-xl md:text-2xl font-medium mb-6 h-8 flex items-center">
               <span className="text-light-100">{typedText}</span>
               <span
-                className={`ml-1 inline-block w-2 h-6 bg-primary-400 ${showCursor ? "opacity-100" : "opacity-0"}`}
+                className={`ml-1 inline-block w-2 h-6 bg-primary-400 ${
+                  showCursor ? "opacity-100" : "opacity-0"
+                }`}
               ></span>
             </div>
 

@@ -391,7 +391,7 @@ const AboutDescribe = () => {
                     <span className="text-pink-400">app</span> ={" "}
                     <span className="text-pink-400">express</span>();
                   </p>
-                  <p className="text-gray-500">// Connect to MongoDB</p>
+                  <p className="text-gray-500">Connect to MongoDB</p>
                   <p>
                     <span className="text-pink-400">mongoose</span>.
                     <span className="text-primary-400">connect</span>

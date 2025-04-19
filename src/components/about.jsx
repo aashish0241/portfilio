@@ -179,7 +179,7 @@ const About = () => {
               <div className="mt-8">
                 <div className="bg-dark-800 rounded-lg p-4 font-code text-sm overflow-hidden">
                   <div className="flex text-gray-500 mb-2 text-xs">
-                    <span>// A glimpse of my approach</span>
+                    <span> A glimpse of my approach</span>
                   </div>
                   <div>
                     <span className="text-pink-500">const</span>{" "}

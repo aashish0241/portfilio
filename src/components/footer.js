@@ -187,7 +187,7 @@ const Footer = () => {
 
           <div className="text-xs text-gray-500">
             <span className="font-code">
-              /* Designed and built with passion */
+               Designed and built with passion 
             </span>
           </div>
         </div>
