@@ -4,56 +4,54 @@ const TechBackground = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth < 768) return; // Disable on small screens
+
     const canvas = canvasRef.current;
-    if (!canvas) return; // Ensure the canvas is available
+    if (!canvas) return;
+
     const ctx = canvas.getContext("2d");
-    if (!ctx) return; // Ensure the context is available
+    if (!ctx) return;
 
-    let animationFrameId;
+    let intervalId;
     let resizeObserver;
-
     const particles = [];
 
-    // Function to resize the canvas
     const resizeCanvas = () => {
       const parent = canvas.parentElement;
-      if (!parent) return; // Ensure the parent element is available
+      if (!parent) return;
 
       const dpr = window.devicePixelRatio || 1;
       canvas.width = parent.offsetWidth * dpr;
       canvas.height = parent.offsetHeight * dpr;
       canvas.style.width = `${parent.offsetWidth}px`;
       canvas.style.height = `${parent.offsetHeight}px`;
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform before scale
       ctx.scale(dpr, dpr);
-
       createParticles();
     };
 
-    // Create particles and populate them
     const createParticles = () => {
       const w = canvas.width / (window.devicePixelRatio || 1);
       const h = canvas.height / (window.devicePixelRatio || 1);
-      const particleCount = Math.min(Math.floor((w * h) / 10000), 120);
-      particles.length = 0;
+      const particleCount = Math.min(Math.floor((w * h) / 15000), 20); // Fewer particles
 
+      particles.length = 0;
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * w,
           y: Math.random() * h,
-          size: Math.random() * 1.5 + 0.5,
+          size: Math.random() * 2.5 + 3.5, // Bigger particles
           baseColor: Math.random() > 0.5 ? [0, 255, 195] : [255, 0, 122],
-          alpha: Math.random() * 0.5 + 0.1,
-          speedX: (Math.random() - 0.5) * 0.6,
-          speedY: (Math.random() - 0.5) * 0.6,
-          pulse: Math.random() * 0.05 + 0.01,
+          alpha: Math.random() * 0.5 + 0.3,
+          speedX: (Math.random() - 0.5) * 0.3,
+          speedY: (Math.random() - 0.5) * 0.3,
+          pulse: Math.random() * 0.03 + 0.01,
         });
       }
     };
 
-    // Draw particles and handle animation
     const drawScene = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       const w = canvas.width / (window.devicePixelRatio || 1);
       const h = canvas.height / (window.devicePixelRatio || 1);
 
@@ -64,7 +62,7 @@ const TechBackground = () => {
 
         // Pulse effect
         p.alpha += p.pulse;
-        if (p.alpha > 0.5 || p.alpha < 0.1) p.pulse *= -1;
+        if (p.alpha > 0.6 || p.alpha < 0.3) p.pulse *= -1;
 
         // Boundary bounce
         if (p.x < 0 || p.x > w) p.speedX *= -1;
@@ -90,27 +88,20 @@ const TechBackground = () => {
             ctx.lineTo(p2.x, p2.y);
             ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.08})`;
             ctx.lineWidth = 0.5;
-            ctx.shadowColor = `rgba(255, 255, 255, ${opacity * 0.3})`;
-            ctx.shadowBlur = 5;
             ctx.stroke();
-            ctx.shadowBlur = 0;
           }
         }
       });
-
-      animationFrameId = requestAnimationFrame(drawScene);
     };
 
-    // Use ResizeObserver for smoother canvas resize
     resizeObserver = new ResizeObserver(resizeCanvas);
     resizeObserver.observe(canvas.parentElement);
+    resizeCanvas(); // Initial setup
 
-    resizeCanvas(); // Initial resize
-    drawScene(); // Start drawing
+    intervalId = setInterval(drawScene, 1000 / 30); // ~30 FPS
 
-    // Cleanup on component unmount
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      clearInterval(intervalId);
       resizeObserver.disconnect();
     };
   }, []);
@@ -119,7 +110,7 @@ const TechBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 pointer-events-none opacity-40"
-      style={{ zIndex: 1 }}
+      style={{ zIndex: 1, willChange: "transform, opacity" }}
     />
   );
 };

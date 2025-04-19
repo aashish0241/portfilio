@@ -9,13 +9,13 @@ import Certificate from "./certificate";
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="bg-dark-900 text-light-100">
       <Hero />
       <About1 />
       <Skillscollection />
-      <Certificate />
       <Service />
       <Portfilio />
+      <Certificate />
       <Contact />
     </div>
   );

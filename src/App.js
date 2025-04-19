@@ -11,22 +11,22 @@ import Footer from "./components/footer";
 import Certificate from "./components/certificate";
 import Error10 from "./components/error";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    AOS.init({
-      duration: 2000,
-      easing: "ease",
-      once: false,
-      mirror: false,
-      offset: 100,
-      delay: 300,
-    });
-    AOS.refresh();
+  //   AOS.init({
+  //     duration: 2000,
+  //     easing: "ease",
+  //     once: false,
+  //     mirror: false,
+  //     offset: 100,
+  //     delay: 300,
+  //   });
+  //   AOS.refresh();
 
     // Simulating page load for 2 seconds (replace with actual logic)
     setTimeout(() => {
