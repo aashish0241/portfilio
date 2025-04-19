@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import TechBackground from "./TechBackground";
+import emailjs from "emailjs-com";
+
 import {
   FaEnvelope,
   FaPhone,
@@ -68,24 +70,31 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Here you would normally integrate with an email service
-    // For example, with EmailJS:
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
-
-    // Simulating form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormStatus({
-        type: "success",
-        message: "Message sent successfully! You will get a response soon.",
-      });
-      e.target.reset();
-
-      // Clear status message after 5 seconds
-      setTimeout(() => {
-        setFormStatus({ type: "", message: "" });
-      }, 5000);
-    }, 1500);
+    emailjs
+      .sendForm(
+        "service_yqtgqwu", // <-- Replace with your EmailJS Service ID
+        "template_745as8n", // <-- Replace with your EmailJS Template ID
+        form.current,
+        "IMh1Zycf42asKB0M2" // <-- Replace with your EmailJS Public Key
+      )
+      .then(
+        () => {
+          setIsSubmitting(false);
+          setFormStatus({
+            type: "success",
+            message: "Message sent successfully! You will get a response soon.",
+          });
+          e.target.reset();
+          setTimeout(() => setFormStatus({ type: "", message: "" }), 5000);
+        },
+        (error) => {
+          setIsSubmitting(false);
+          setFormStatus({
+            type: "error",
+            message: "Failed to send message. Please try again.",
+          });
+        }
+      );
   };
 
   return (
