@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import TechBackground from "./TechBackground";
 import {
@@ -14,20 +14,21 @@ import { TbBrandUpwork } from "react-icons/tb";
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const roles = [
-    "Backend Developer",
-    "Node.js Expert",
-    "API Architect",
-    "Full Stack Developer",
-  ];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
   const [charIndex, setCharIndex] = useState(0);
-
+  const roles = useMemo(
+    () => [
+      "Backend Developer",
+      "Node.js Expert",
+      "API Architect",
+      "Full Stack Developer",
+    ],
+    []
+  );
   // Typing effect
   useEffect(() => {
     const currentRole = roles[currentRoleIndex];
-
     if (isTyping) {
       if (charIndex < currentRole.length) {
         const timeout = setTimeout(() => {
@@ -54,7 +55,7 @@ const Hero = () => {
         setCurrentRoleIndex((currentRoleIndex + 1) % roles.length);
       }
     }
-  }, [charIndex, isTyping, currentRoleIndex]);
+  }, [charIndex, isTyping, currentRoleIndex, roles]);
 
   // Blinking cursor effect
   useEffect(() => {
