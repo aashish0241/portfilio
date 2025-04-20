@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import TechBackground from "./TechBackground";
+import aashsihcv from "../assets/aashishcv2.pdf";
 import {
   FaFacebook,
   FaInstagram,
@@ -21,6 +22,7 @@ const Hero = () => {
     () => [
       "Backend Developer",
       "Node.js Expert",
+      "Automation Bot Developer",
       "API Architect",
       "Full Stack Developer",
     ],
@@ -66,7 +68,7 @@ const Hero = () => {
   }, []);
 
   const openCV = () => {
-    window.open("/src/assets/aashishcv.pdf", "_blank");
+    window.open(aashsihcv, "_blank");
   };
 
   return (
